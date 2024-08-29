@@ -18,8 +18,8 @@
 }
 
 .logo img {
-    width: 50px;
-    height: 50px;
+    width: 60px; /* Увеличено с 50px до 60px */
+    height: 60px; /* Увеличено с 50px до 60px */
     object-fit: contain;
 }
 
@@ -39,11 +39,11 @@
 
 .item {
     margin: 8px;
-    width: calc(50% - 16px); /* Два элемента в строке */
-    height: 60px;
+    width: calc(100% - 16px); /* Один элемент в строке для мобильных */
+    height: 80px; /* Увеличено с 60px до 80px */
     border: 1px solid #ddd;
     border-radius: 10px;
-    padding: 2px;
+    padding: 10px; /* Увеличено с 2px до 10px */
     text-align: center;
     flex-grow: 1;
     transition: transform 0.1s ease, box-shadow 0.1s ease;
@@ -61,12 +61,12 @@
 }
 
 .item h3 {
-    font-size: 28px; /* Увеличено с 14px до 28px */
+    font-size: 24px; /* Уменьшено с 28px для лучшего отображения */
     margin-top: 4px;
 }
 
 .item p {
-    font-size: 16px; /* Увеличено с 8px до 16px */
+    font-size: 14px; /* Уменьшено с 16px для лучшего отображения */
     color: #666;
 }
 
@@ -165,8 +165,8 @@ h1 {
 }
 
 .station-button {
-    padding: 20px 40px; /* Увеличено с 10px 20px до 20px 40px */
-    font-size: 16px; /* Добавлено для увеличения размера шрифта */
+    padding: 20px 40px;
+    font-size: 18px; /* Увеличено с 16px до 18px */
     border: none;
     border-radius: 5px;
     background-color: #4CAF50;
