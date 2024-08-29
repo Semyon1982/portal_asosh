@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Full Screen Iframe</title>
+  <style type="text/css">
+    html { overflow: auto; }
+    html, body, div, iframe { margin: 0px; padding: 0px; height: 100%; border: none; }
+    iframe { display: block; width: 100%; height: 100%; border: none; overflow-y: auto; overflow-x: hidden; }
+  </style>
+
+</head>
+<body onload="checkIframe()">
+<iframe id="myIframe" src="https://docs.google.com/spreadsheets/d/1WqeRM2IQtttznc-KmmY09SlKOEtMU6SDKkL3cjHq0XM/pubhtml?widget=true&headers=false" frameborder="0" marginheight="0" marginwidth="0" width="100%" height="100%" scrolling="auto"></iframe>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Проблемы со связью</title>
+    <link rel="icon" href="images/offline.png" type="image/x-icon">
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+        }
+        .header {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 20px;
+        }
+        .header img {
+          width: 50px;
+          margin-right: 10px;
+          animation: rotate 5s linear infinite;
+        }
+        .header h3 {
+          font-size: 24px;
+          margin: 0;
+        }
+        img {
+          width: 50%;
+          margin: 20px;
+        }
+        .text {
+          font-size: 18px;
+          margin-bottom: 20px;
+        }
+        button {
+          background-color: #4CAF50;
+          color: #fff;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        button:hover {
+          background-color: #3e8e41;
+        }
+        .audio-player {
+          margin-bottom: 20px;
+        }
+        .audio-player select {
+          margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <img src="images/logo.png" alt="Logo">
+    <h4>МБОУ Антоновская СОШ им.Н.Н.Чусовского</h4>
+</div>
+<div>
+    <img src="images/offline.png" alt="Error Image">
+    <p class="text">Отсутствует интернет.</br>Попробуйте позднее.</p>
+    <div class="audio-player">
+        <p>Можно слушать музыку пока нету интернета оффлайн</p>
+        <select id="track-select">
+            <option value="" disabled selected>-- Выберите музыку --</option>
+            <option value="music/5utra-davajj-sbezhim-iskorki.mp3">5УТРА - Давай сбежим</option>
+            <option value="music/khabib-jagoda-malinka.mp3">ХАБИБ - Ягода малинка</option>
+            <option value="music/Антон Иванов - Нюрба вальса.mp3">Антон Иванов - Нюрба вальса</option>
+            <option value="music/Валентин Макаров - Тапталым илдьитэ.mp3">Валентин Макаров - Тапталым илдьитэ</option>
+        </select>
+        <audio id="audio-player" controls>
+
+            Ваш браузер не поддерживает элемент аудио.
+        </audio>
+
+    </div>
+    <button onclick="location.href='index.html'">На главную</button>
+    <p>Вы можете добавить музыку </br>которую вы желаете слушать</br>написав нам на <a href="mailto:online@newrba.ru">online@newrba.ru</a>.</br>это бесплатно.</p>
+</div>
+
+<script>
+    document.getElementById('track-select').addEventListener('change', function() {
+      document.getElementById('audio-player').src = this.value;
+      document.getElementById('audio-player').load();
+      document.getElementById('audio-player').play();
+    });
+</script>
+</body>
+</html>

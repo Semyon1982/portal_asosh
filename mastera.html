@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Портал АСОШ</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+</head>
+<body>
+<div class="logo-container">
+    <div class="logo">
+        <img src="images/mastera.png" alt="Logo">
+    </div>
+    <h2 class="portal-name">Мастера Вкуса</h2>
+
+</div>
+
+        <div class="menu">
+            <div class="item">
+                <a href="https://bit.ly/mastera-vkusa-menu-tg" class="button-with-icon">
+                    <img src="images/mastera.png" alt="Расписание">
+                    <h3>Сайт магазина</h3>
+                </a>
+            </div>
+            <div class="item">
+                <a href="https://t.me/masteravkusaNRB_bot" class="button-with-icon">
+                    <img src="images/mastera-bot.jpg" alt="Vkontakte">
+                    <h3>Телеграм бот</h3>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="scripts/script.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const buttons = document.querySelectorAll('.button-with-icon');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default link behavior
+
+                // Play a click sound
+                const audio = new Audio('sounds/click.mp3');
+                audio.play();
+
+                // Add the animation class
+                button.classList.add('fa-beat');
+
+                // Transition to the link after 2 seconds
+                setTimeout(function() {
+                    window.location.href = button.href;
+                }, 1400);
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
+
+

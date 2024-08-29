@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Портал АСОШ</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <style>
+
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="logo-container">
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo">
+        </div>
+        <h2 class="portal-name">Портал МБОУ АСОШ</h2>
+    </div>
+    <div class="menu">
+        <div class="item">
+            <a href="raspisanie.html" class="button-with-icon">
+                <img src="images/raspisanie.png" alt="Расписание">
+                <h3>Расписание</h3>
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://vk.com/antonovkaschool" class="button-with-icon">
+                <img src="images/vk.png" alt="Vkontakte">
+                <h3>Vkontakte</h3>
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://docs.google.com/spreadsheets/d/1EbienUINaSft_DQobkxBI8fCSr_6hug2cTXIEevnLCQ/pubhtml?widget=true&headers=false" class="button-with-icon">
+                <img src="images/nedelniy.png" alt="Недельный план">
+                <h3>Недельный план</h3>
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://t.me/antonovkaschool" class="button-with-icon">
+                <img src="images/tg.png" alt="Телеграм канал">
+                <h3>Телеграм канал</h3>
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://www.youtube.com/@antonovkaschool" class="button-with-icon">
+                <img src="images/youtube.png" alt="YouTube канал">
+                <h3>YouTube канал</h3>
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://nyr-ants.obr.sakha.gov.ru/" class="button-with-icon">
+                <img src="images/site.png" alt="Сайт школы">
+                <h3>Сайт школы</h3>
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://sferum.ru/?p=dashboard&schoolId=205303400" class="button-with-icon">
+                <img src="images/sferum.png" alt="Сферум">
+                <h3>Сферум</h3>
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://uuonyurba.ru/" class="button-with-icon">
+                <img src="images/uno2.jpg" alt="УНО">
+                <h3>МКУ УОНР</h3>
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://www.gosuslugi.ru/help/faq/school/22" class="button-with-icon">
+                <img src="images/gosuslugi.png" alt="Гослуслуги">
+                <h3>Записать ребенка</h3>
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://m.rp5.ru/%D0%9F%D0%BE%D0%B3%D0%BE%D0%B4%D0%B0_%D0%B2_%D0%9D%D1%8E%D1%80%D0%B1%D0%B5" class="button-with-icon">
+                <img src="images/prognoz.png" alt="Погода">
+                <h3>Прогноз погоды</h3>
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://sgo.e-yakutia.ru/" class="button-with-icon">
+                <img src="images/sgo_logo.png" alt="СГО">
+                <h3>СГО</h3>
+            </a>
+        </div>
+    </div>
+</div>
+
+<script src="scripts/script.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const buttons = document.querySelectorAll('.button-with-icon');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', function(event) {
+                event.preventDefault();
+
+                if (!navigator.onLine) {
+                    window.location.href = 'error.html';
+                    return;
+                }
+
+                const audio = new Audio('sounds/click.mp3');
+                audio.play();
+
+                setTimeout(function() {
+                    window.location.href = button.href;
+                }, 1400);
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

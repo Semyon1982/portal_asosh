@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главное меню</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Центрирование содержимого */
+            width: 100%;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            width: 15px;
+            height: 15px;
+            margin-right: 10px;
+        }
+
+        .portal-name {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            width: 300px;
+            margin-top: 20px;
+        }
+
+        .menu-item {
+            text-align: center;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-item a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .menu-item img {
+            width: 60px;
+            height: 60px;
+            display: block;
+            margin: 0 auto 10px;
+        }
+
+        .menu-item p {
+            margin: 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <img src="images/logo.png" alt="Логотип" class="logo">
+    <h1 class="portal-name">Портал МБОУ АСОШ</h1>
+</header>
+<div class="menu">
+    <div class="menu-item">
+        <a href="raspisanie.html" class="button-with-icon">
+            <img src="images/raspisanie.png" alt="Расписание">
+            <p>Расписание</p>
+        </a>
+    </div>
+    <div class="menu-item">
+        <a href="https://vk.com/antonovkaschool" class="button-with-icon">
+            <img src="images/vk.png" alt="Vkontakte">
+            <p>Vkontakte</p>
+        </a>
+    </div>
+    <div class="menu-item">
+        <a href="https://docs.google.com/spreadsheets/d/1EbienUINaSft_DQobkxBI8fCSr_6hug2cTXIEevnLCQ/pubhtml?widget=true&headers=false" class="button-with-icon">
+            <img src="images/nedelniy.png" alt="Недельный план">
+            <p>Недельный план</p>
+        </a>
+    </div>
+    <div class="menu-item">
+        <a href="https://t.me/antonovkaschool" class="button-with-icon">
+            <img src="images/tg.png" alt="Телеграм канал">
+            <p>Телеграм канал</p>
+        </a>
+    </div>
+    <div class="menu-item">
+        <a href="https://www.youtube.com/@antonovkaschool" class="button-with-icon">
+            <img src="images/youtube.png" alt="YouTube канал">
+            <p>YouTube канал</p>
+        </a>
+    </div>
+    <div class="menu-item">
+        <a href="https://nyr-ants.obr.sakha.gov.ru/" class="button-with-icon">
+            <img src="images/site.png" alt="Сайт школы">
+            <p>Сайт школы</p>
+        </a>
+    </div>
+    <div class="menu-item">
+        <a href="https://sferum.ru/?p=dashboard&schoolId=205303400" class="button-with-icon">
+            <img src="images/sferum.png" alt="Сферум">
+            <p>Сферум</p>
+        </a>
+    </div>
+    <div class="menu-item">
+        <a href="https://uuonyurba.ru/" class="button-with-icon">
+            <img src="images/uno2.jpg" alt="Другое">
+            <p>МКУ УОНР</p>
+        </a>
+    </div>
+    <div class="menu-item">
+        <a href="https://www.gosuslugi.ru/help/faq/school/22" class="button-with-icon">
+            <img src="images/gosuslugi.png" alt="Другое">
+            <p>Записать ребенка</p>
+        </a>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Портал АСОШ</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <style>
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Высота экрана */
+            flex-direction: column; /* Вертикальное центрирование */
+        }
+        .menu {
+            display: flex; /* Горизонтальное расположение кнопок */
+            justify-content: space-around; /* Равномерное распределение кнопок */
+        }
+        .button-with-icon {
+            transition: all 0.3s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1px;
+            font-size: 1.5em;
+            border-radius: 10px;
+            background-color: #f0f0f0;
+            text-decoration: none;
+            color: #333;
+            margin: 10px; /* Отступы между кнопками */
+        }
+        .button-with-icon:hover {
+            transform: scale(1.1);
+        }
+        .button-with-icon:active {
+            transform: scale(0.9);
+            box-shadow: 0 0 0 2px #333; /* Эффект нажатия */
+            background-color: #ccc; /* Цвет фона при нажатии */
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="logo-container">
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo">
+        </div>
+        <h2 class="portal-name">Портал МБОУ АСОШ</h2>
+    </div>
+    <div class="menu">
+        <div class="item">
+            <a href="https://docs.google.com/spreadsheets/d/1WqeRM2IQtttznc-KmmY09SlKOEtMU6SDKkL3cjHq0XM/pubhtml?widget=true&headers=false" class="button-with-icon">
+                <img src="images/nachalnie.png" alt="1-4 классы" style="margin-right: 10px;">
+                <h3>1-4 классы</h3>
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://docs.google.com/spreadsheets/d/13XE9hpD8NEgAMmpETyj2NqjC_CwAQGPwrc-o1BXuEq4/pubhtml?widget=true&headers=false" class="button-with-icon">
+                <img src="images/srednya.png" alt="5-11 классы" style="margin-right: 10px;">
+                <h3>5-11 классы</h3>
+            </a>
+        </div>
+    </div>
+</div>
+
+<script src="scripts/script.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const buttons = document.querySelectorAll('.button-with-icon');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default link behavior
+
+                // Play a click sound
+                const audio = new Audio('sounds/click.mp3');
+                audio.play();
+
+                // Transition to the link after 2 seconds
+                setTimeout(function() {
+                    window.location.href = button.href;
+                }, 1400);
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

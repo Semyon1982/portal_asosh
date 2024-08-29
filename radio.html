@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Радио онлайн</title>
+  <style>
+    /* CSS Styles */
+    body {
+      font-family: Arial, sans-serif; /* Basic font style */
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4; /* Light background color */
+    }
+
+    .container {
+      text-align: center; /* Center align the content */
+      padding: 20px; /* Add some padding */
+    }
+
+    .logo {
+      margin-bottom: 20px; /* Add space below the logo */
+      position: relative; /* Allows for absolute positioning of child elements */
+    }
+
+    .logo img {
+      max-width: 100%; /* Responsive logo */
+      height: auto; /* Maintain aspect ratio */
+      position: relative; /* Position relative to its normal position */
+      top: -20px; /* Move the logo higher */
+    }
+
+    h1 {
+      font-size: 2em; /* Adjust the font size of the title */
+      margin-top: 10px; /* Add space above the title */
+      color: #333; /* Darker color for better readability */
+    }
+
+    .radio-player {
+      margin-top: 20px; /* Space above the radio player */
+    }
+
+    .stations {
+      margin-top: 10px; /* Space above the stations dropdown */
+    }
+
+    select {
+      padding: 10px; /* Padding for the dropdown */
+      font-size: 1em; /* Font size for the dropdown */
+    }
+
+    .track-info {
+      margin-top: 10px; /* Space above the track info */
+      font-size: 1.2em; /* Font size for the track info */
+      color: #666; /* Color for the track info */
+    }
+
+    .footer-note {
+      font-family: 'Playfair Display', serif; /* Use a nice serif font */
+      font-size: 1.2em; /* Adjust the font size */
+      color: #333; /* Darker color for better readability */
+      text-align: center; /* Center align the text */
+      margin-top: 20px; /* Space above the note */
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <!-- Logo Section -->
+  <div class="logo">
+    <img src="images/radio.jpg" alt="Radio Logo" style="max-width: 100%; height: auto;">
+  </div>
+
+  <div class="radio-player">
+    <audio id="radio" controls>
+      Your browser does not support the audio element.
+    </audio>
+    <div class="stations">
+
+      <select id="station-select">
+        <option value="" disabled selected>-- Выберите станцию --</option>
+        <option value="http://37.139.33.202:8000/stream.mp3">Сахалыы Виктория</option>
+        <option value="https://icecast-saha.cdnvideo.ru/saha">Тэтим</option>
+        <option value="http://eptop128.streamr.ru">Европа+ Top40</option>
+      </select>
+    </div>
+    <div class="track-info" id="track-info"></div>
+  </div>
+</div>
+
+<div class="footer-note">
+  Вы можете добавить радиостанции</br> написав на <a href="mailto:online@newrba.ru">online@newrba.ru</a>
+</div>
+
+<script src="scripts/script.js"></script>
+</body>
+</html>
