@@ -30,7 +30,7 @@
 
 .menu {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Три элемента в строке */
+    grid-template-columns: repeat(2, 1fr); /* Три элемента в строке */
     gap: 16px; /* Промежуток между элементами */
     padding: 5px;
     margin-top: 50px;
