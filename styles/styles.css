@@ -30,7 +30,7 @@
 
 .menu {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Три элемента в строке */
+    grid-template-columns: repeat(2, 1fr); /* Два элемента в строке */
     gap: 16px; /* Промежуток между элементами */
     padding: 5px;
     margin-top: 50px;
@@ -43,6 +43,7 @@
     padding: 10px;
     text-align: center;
     transition: transform 0.1s ease, box-shadow 0.1s ease;
+    font-size: 14px; /* Устанавливаем размер шрифта в 14 пикселей */
 }
 
 .item:active {
@@ -57,7 +58,7 @@
 }
 
 .item h3 {
-    font-size: 14px;
+    font-size: 14px; /* Устанавливаем размер шрифта в 14 пикселей */
     margin-top: 4px;
 }
 
@@ -79,25 +80,9 @@ body {
 
 @media (max-width: 768px) {
     .menu {
-        grid-template-columns: repeat(2, 1fr); /* Два элемента в строке на мобильных устройствах */
+        grid-template-columns: 1fr; /* Один элемент в строке на мобильных устройствах */
     }
     .item {
         padding: 5px; /* Уменьшаем отступы для лучшего отображения */
-    }
-}
-
-@media (max-width: 480px) {
-    .menu {
-        grid-template-columns: 1fr; /* Один элемент в строке на очень маленьких экранах */
-    }
-    .item {
-        padding: 2px; /* Дополнительное уменьшение отступов на очень маленьких экранах */
-    }
-    .logo img {
-        width: 40px; /* Уменьшаем размер логотипа для мобильных устройств */
-        height: 40px;
-    }
-    .portal-name {
-        font-size: 18px; /* Уменьшаем размер шрифта названия портала */
     }
 }
