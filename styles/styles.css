@@ -61,12 +61,12 @@
 }
 
 .item h3 {
-    font-size: 14px;
+    font-size: 28px; /* Увеличено с 14px до 28px */
     margin-top: 4px;
 }
 
 .item p {
-    font-size: 8px;
+    font-size: 16px; /* Увеличено с 8px до 16px */
     color: #666;
 }
 
@@ -165,7 +165,8 @@ h1 {
 }
 
 .station-button {
-    padding: 10px 20px;
+    padding: 20px 40px; /* Увеличено с 10px 20px до 20px 40px */
+    font-size: 16px; /* Добавлено для увеличения размера шрифта */
     border: none;
     border-radius: 5px;
     background-color: #4CAF50;
