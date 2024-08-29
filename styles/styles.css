@@ -1,5 +1,5 @@
 .header {
-    width: 100%;
+    width: 95%;
     height: 50px;
     background-color: #fff;
     color: #333;
@@ -29,21 +29,24 @@
 }
 
 .menu {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Два элемента в строке */
-    gap: 16px; /* Промежуток между элементами */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 5px;
-    margin-top: 50px;
-    overflow-x: hidden; /* Убираем горизонтальный скролл */
+    margin-top: 5px;
+    flex-grow: 1;
 }
 
 .item {
+    margin: 8px;
+    width: calc(33.33% - 16px); /* Три элемента в строке */
+    height: 80px; /* Увеличение высоты для удобства */
     border: 1px solid #ddd;
     border-radius: 10px;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
+    flex-grow: 1;
     transition: transform 0.1s ease, box-shadow 0.1s ease;
-    font-size: 14px; /* Устанавливаем размер шрифта в 14 пикселей */
 }
 
 .item:active {
@@ -52,18 +55,18 @@
 }
 
 .item img {
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
     border-radius: 1%;
 }
 
 .item h3 {
-    font-size: 14px; /* Устанавливаем размер шрифта в 14 пикселей */
-    margin-top: 4px;
+    font-size: 12px;
+    margin-top: 6px;
 }
 
 .item p {
-    font-size: 8px;
+    font-size: 10px;
     color: #666;
 }
 
@@ -71,18 +74,115 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-body {
-    font-family: 'Roboto Condensed', sans-serif;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Убираем горизонтальный скролл для тела */
+@media (max-width: 768px) {
+    .item {
+        flex-basis: calc(32.33% - 16px); /* Три элемента в строке */
+        margin: 4px;
+    }
 }
 
-@media (max-width: 768px) {
-    .menu {
-        grid-template-columns: 1fr; /* Один элемент в строке на мобильных устройствах */
-    }
+@media (min-width: 769px) and (max-width: 1024px) {
     .item {
-        padding: 5px; /* Уменьшаем отступы для лучшего отображения */
+        flex-basis: 25%;
+        margin: 8px;
     }
+}
+
+@media (min-width: 1025px) {
+    .item {
+        flex-basis: 20%;
+        margin: 16px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .item {
+        flex-basis: 16.67%;
+        margin: 24px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .item {
+        flex-basis: 14.29%;
+        margin: 32px;
+    }
+}
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url('../fonts/RobotoCondensed-Regular.woff2') format('woff2'),
+         url('../fonts/RobotoCondensed-Regular.woff') format('woff'),
+         url('../fonts/RobotoCondensed-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url('../fonts/RobotoCondensed-Bold.woff2') format('woff2'),
+         url('../fonts/RobotoCondensed-Bold.woff') format('woff'),
+         url('../fonts/RobotoCondensed-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.radio-player {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.radio-player audio {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.stations {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.station-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+}
+
+.station-button:hover {
+    background-color: #3e8e41;
+}
+
+.station-button.active {
+    background-color: #2ecc71;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
