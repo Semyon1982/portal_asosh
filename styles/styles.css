@@ -33,17 +33,17 @@
     flex-wrap: wrap;
     justify-content: center;
     padding: 5px;
-    margin-top: 5px;
+    margin-top: 50px;
     flex-grow: 1;
 }
 
 .item {
     margin: 8px;
-    width: calc(33.33% - 16px); /* Три элемента в строке */
-    height: 80px; /* Увеличение высоты для удобства */
+    width: calc(50% - 16px); /* Два элемента в строке */
+    height: 60px;
     border: 1px solid #ddd;
     border-radius: 10px;
-    padding: 5px;
+    padding: 2px;
     text-align: center;
     flex-grow: 1;
     transition: transform 0.1s ease, box-shadow 0.1s ease;
@@ -55,18 +55,18 @@
 }
 
 .item img {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     border-radius: 1%;
 }
 
 .item h3 {
-    font-size: 12px;
-    margin-top: 6px;
+    font-size: 14px;
+    margin-top: 4px;
 }
 
 .item p {
-    font-size: 10px;
+    font-size: 8px;
     color: #666;
 }
 
@@ -76,35 +76,35 @@
 
 @media (max-width: 768px) {
     .item {
-        flex-basis: calc(32.33% - 16px); /* Три элемента в строке */
+        flex-basis: calc(50% - 16px); /* Два элемента в строке */
         margin: 4px;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
     .item {
-        flex-basis: 25%;
+        flex-basis: 33.33%;
         margin: 8px;
     }
 }
 
 @media (min-width: 1025px) {
     .item {
-        flex-basis: 20%;
+        flex-basis: 25%;
         margin: 16px;
     }
 }
 
 @media (min-width: 1200px) {
     .item {
-        flex-basis: 16.67%;
+        flex-basis: 20%;
         margin: 24px;
     }
 }
 
 @media (min-width: 1600px) {
     .item {
-        flex-basis: 14.29%;
+        flex-basis: 16.67%;
         margin: 32px;
     }
 }
