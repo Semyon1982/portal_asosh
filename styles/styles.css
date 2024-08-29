@@ -40,7 +40,7 @@
 .item {
     margin: 8px;
     width: calc(100% - 16px); /* Один элемент в строке для мобильных */
-    height: 80px; /* Увеличено с 60px до 80px */
+    height: 100px; /* Увеличено с 80px до 100px */
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 10px; /* Увеличено с 2px до 10px */
@@ -55,8 +55,8 @@
 }
 
 .item img {
-    width: 36px;
-    height: 36px;
+    width: 50px; /* Увеличено с 36px до 50px */
+    height: 50px; /* Увеличено с 36px до 50px */
     border-radius: 1%;
 }
 
@@ -66,7 +66,7 @@
 }
 
 .item p {
-    font-size: 14px; /* Уменьшено с 16px для лучшего отображения */
+    font-size: 16px; /* Вернули к 16px для лучшего отображения */
     color: #666;
 }
 
@@ -166,7 +166,7 @@ h1 {
 
 .station-button {
     padding: 20px 40px;
-    font-size: 18px; /* Увеличено с 16px до 18px */
+    font-size: 20px; /* Увеличено с 18px до 20px */
     border: none;
     border-radius: 5px;
     background-color: #4CAF50;
