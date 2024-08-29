@@ -30,9 +30,10 @@
             font-size: 1.5em;
         }
         .menu {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            justify-items: center;
             padding: 10px;
         }
         .item {
@@ -44,6 +45,7 @@
             align-items: center;
             text-decoration: none;
             color: #000;
+            width: 100%;
         }
         .button-with-icon img {
             max-width: 50px;
