@@ -2,60 +2,7 @@
 <html>
 <head>
     <title>Портал АСОШ</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .header {
-            background-color: #f8f9fa;
-            padding: 20px;
-            text-align: center;
-        }
-        .logo-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .logo img {
-            max-width: 100px;
-            height: auto;
-        }
-        .portal-name {
-            margin-left: 10px;
-            font-size: 1.5em;
-        }
-        .menu {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
-            justify-items: center;
-            padding: 10px;
-        }
-        .item {
-            margin: 10px;
-        }
-        .button-with-icon {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-decoration: none;
-            color: #000;
-            width: 100%;
-        }
-        .button-with-icon img {
-            max-width: 50px;
-            height: auto;
-        }
-        .button-with-icon h3 {
-            margin: 5px 0 0;
-            font-size: 1em;
-        }
-    </style>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
 <div class="header">
@@ -126,34 +73,57 @@
                 <h3>Прогноз погоды</h3>
             </a>
         </div>
+        <div class="item">
+            <a href="https://sgo.e-yakutia.ru/" class="button-with-icon">
+                <img src="images/sgo_logo.png" alt="СГО">
+                <h3>СГО</h3>
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://t.me/poputka_NRB_bot" class="button-with-icon">
+                <img src="images/poputka.png" alt="Попутка Нюрба">
+                <h3>Попутка Нюрба</h3>
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://kino.nrbr.ru/" class="button-with-icon">
+                <img src="images/afisha.png" alt="Афиша Юнион">
+                <h3>Афиша Юнион</h3>
+            </a>
+        </div>
+        <div class="item">
+            <a href="adv.html" class="button-with-icon">
+                <img src="images/объявления.png" alt="Группы объявлений">
+                <h3>Группы объявлений</h3>
+            </a>
+        </div>
+        <div class="item">
+            <a href="mastera.html" class="button-with-icon">
+                <img src="images/mastera.png" alt="Мастера Вкуса">
+                <h3>Мастера Вкуса</h3>
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://xn--90adptbcs3gya.xn--p1ai/" class="button-with-icon">
+                <img src="images/ogninyurba.png" alt="Огни Нюрбы">
+                <h3>Огни Нюрбы</h3>
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://dussh-nyurba.ru/" class="button-with-icon">
+                <img src="images/dussh.png" alt="ДЮСШ Нюрба">
+                <h3>ДЮСШ Нюрба</h3>
+            </a>
+        </div>
+        <div class="item">
+            <a href="radio.html" class="button-with-icon">
+                <img src="images/radio.jpg" alt="Радио Онлайн">
+                <h3>Радио Онлайн</h3>
+            </a>
+        </div>
     </div>
 </div>
 
 <script src="scripts/script.js"></script>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const buttons = document.querySelectorAll('.button-with-icon');
-
-        buttons.forEach(button => {
-            button.addEventListener('click', function(event) {
-                event.preventDefault();
-
-                if (!navigator.onLine) {
-                    window.location.href = 'error.html';
-                    return;
-                }
-
-                const audio = new Audio('sounds/click.mp3');
-                audio.play();
-
-                setTimeout(function() {
-                    window.location.href = button.href;
-                }, 1400);
-            });
-        });
-    });
-</script>
-
 </body>
 </html>
